@@ -1,0 +1,20 @@
+resources:
+  pipelines:
+    dev_qasimanwarv5_extracredit_pipo:
+      name: '[dev qasimanwarv5] ExtraCredit_pipo'
+      configuration:
+        "my_catalog": "ec_catalog"
+        "my_schema": "ec_schema"
+        "my_volume": "ec_volume"
+      libraries:
+        - notebook:
+            path: ..\src\ExtraCredit_pipo.py
+      catalog: ec_catalog
+      channel: PREVIEW
+      deployment:
+        kind: BUNDLE
+        metadata_file_path: /Workspace/Users/qasimanwarv5@gmail.com/.bundle/extra_credit_bucle/dev/state/metadata.json
+      development: true
+      photon: true
+      schema: ec_schema
+      serverless: true
